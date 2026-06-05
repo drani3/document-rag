@@ -7,18 +7,21 @@ name = "document-copilot-backend"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
-    "alembic==1.20.0",
-    "fastapi==0.141.1",
+    "alembic==1.18.4",
+    "fastapi==0.136.3",
     "httpx==0.28.1",
-    "openai==3.13.0",
-    "pgvector==0.5.0",
-    "psycopg[binary]==3.3.5",
-    "pydantic-ai==2.43.0",
-    "pydantic-settings==2.15.0",
-    "sqlalchemy==2.0.52",
-    "structlog==26.1.0",
-    "supabase==2.31.0",
-    "uvicorn==0.52.4",
+    "openai==2.38.0",
+    "pgvector==0.4.2",
+    "psycopg[binary]==3.3.4",
+    "pydantic==2.13.4",
+    "pydantic-ai==1.104.0",
+    "pydantic-settings==2.14.1",
+    "sqlalchemy==2.0.50",
+    "structlog==25.5.0",
+    "supabase==2.30.0",
+    "tiktoken==0.12.0",
+    "uvicorn==0.48.0",
+    "docling==2.96.0",
 ]
 
 [tool.hatch.build.targets.wheel]
@@ -30,7 +33,11 @@ exclude-newer = "7 days"
 
 [dependency-groups]
 dev = [
-    "ipykernel==7.3.0",
-    "pytest==9.1.1",
-    "ruff==0.16.7",
+    "ipykernel==7.2.0",
+    "pytest==9.0.3",
+    "ruff==0.15.15",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
