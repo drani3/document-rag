@@ -21,7 +21,7 @@ Initialize Alembic once from `backend/`:
 uv run alembic init alembic
 ```
 
-Configure `alembic/env.py` to import the app's SQLAlchemy metadata and read the direct database URL from `app.config.settings`. Use the direct/session Supabase database connection, not the transaction pooler URL, for migrations.
+Configure `../../backend/alembic/env.py` to import the app's SQLAlchemy metadata and read the direct database URL from `app.config.settings`. Use the direct/session Supabase database connection, not the transaction pooler URL, for migrations.
 
 Create a migration after changing SQLAlchemy models:
 
