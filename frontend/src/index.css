@@ -256,14 +256,8 @@ code {
 
 @layer base {
   * {
-    border-color: var(--border);
-    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
-  }
+    @apply border-border outline-ring/50;}
   body {
-    background: var(--background);
-    color: var(--foreground);
-  }
+    @apply bg-background text-foreground;}
   html {
-    font-family: var(--font-sans);
-  }
-}
+    @apply font-sans;}}
