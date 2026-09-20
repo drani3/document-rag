@@ -6,7 +6,7 @@ Create Date: 2026-06-05 13:52:26.031207
 
 """
 
-from typing import Sequence, Union
+from typing import Union
 
 import sqlalchemy as sa
 from pgvector.sqlalchemy import Vector
@@ -15,9 +15,9 @@ from sqlalchemy.dialects import postgresql
 from alembic import op
 
 revision: str = "3c81ca3fef26"
-down_revision: Union[str, Sequence[str], None] = None
-branch_labels: Union[str, Sequence[str], None] = None
-depends_on: Union[str, Sequence[str], None] = None
+down_revision: Union[str, None] = None
+branch_labels: Union[str, None] = None
+depends_on: Union[str, None] = None
 
 EMBEDDING_DIMENSIONS = 1536
 
